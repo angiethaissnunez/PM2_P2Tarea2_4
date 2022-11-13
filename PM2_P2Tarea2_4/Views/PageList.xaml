@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2_P2Tarea2_4.Views.PageList"
+             BackgroundColor="Lavender">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="listadeVideos" ItemTapped="listadeVideos_ItemTapped" >
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+
+                        <ViewCell >
+                            <StackLayout  >
+                                <Grid Padding="10,0,10,0" >
+                                    <Label Grid.Column="0" Text="{Binding id}" TextColor="Black" FontSize="20" FontAttributes="Bold" />
+                                    <Label Grid.Column="1" Text="{Binding descripcion}" TextColor="Black" />
+                                    <Label Grid.Column="2" Text="{Binding fecha}" TextColor="Black" />
+                                </Grid>
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
